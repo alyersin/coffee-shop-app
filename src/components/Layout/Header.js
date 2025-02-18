@@ -19,7 +19,7 @@ export default function Header() {
       <HStack>
         <Drawer />
         <Link className="borderRed" href="/" width={16}>
-          <Image src="/assets/brand-logo.png" />
+          <Image src="/assets/company-logo.png" />
         </Link>
       </HStack>
 
