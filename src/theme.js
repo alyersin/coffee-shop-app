@@ -15,7 +15,7 @@ const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        backgroundImage: "url('/assets/body-bg.jpg')",
+        // backgroundImage: "url('/assets/body-bg.jpg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

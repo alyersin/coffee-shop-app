@@ -1,10 +1,22 @@
-import { Geist, Geist_Mono } from "next/font/google";
+"use client";
+
 import "./globals.css";
+import Header from "@/components/Layout/Header";
+import { ChakraProvider } from "@chakra-ui/react";
+import { CartProvider } from "@/context/CartContext";
+import theme from "../theme";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        <CartProvider>
+          <ChakraProvider theme={theme}>
+            <Header />
+            {children}
+          </ChakraProvider>
+        </CartProvider>
+      </body>
     </html>
   );
 }

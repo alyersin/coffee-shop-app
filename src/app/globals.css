@@ -35,6 +35,18 @@ a {
   text-decoration: none;
 }
 
+.borderRed {
+  border: 1px solid red;
+}
+
+.borderBlue {
+  border: 1px solid blue;
+}
+
+.borderGreen {
+  border: 1px solid green;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     /* color-scheme: dark; */
