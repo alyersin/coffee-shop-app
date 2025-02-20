@@ -1,0 +1,19 @@
+{
+  "ceaiCapsule": [
+    { "name": "Capsule Brand 1", "link": "/ceai/brand1" },
+    { "name": "Capsule Brand 2", "link": "/ceai/brand2" },
+    { "name": "Capsule Brand 3", "link": "/ceai/brand3" }
+  ],
+  "ceaiInfuzabil": [
+    { "name": "Infuzabil Brand 1", "link": "/ceai/brand1" },
+    { "name": "Infuzabil Brand 2", "link": "/ceai/brand2" },
+    { "name": "Infuzabil Brand 3", "link": "/ceai/brand3" },
+    { "name": "Infuzabil Brand 4", "link": "/ceai/brand4" }
+  ],
+  "ceaiInstant": [
+    { "name": "Instant Brand 1", "link": "/ceai/brand1" },
+    { "name": "Instant Brand 2", "link": "/ceai/brand2" },
+    { "name": "Instant Brand 3", "link": "/ceai/brand3" },
+    { "name": "Instant Brand 1", "link": "/ceai/brand4" }
+  ]
+}

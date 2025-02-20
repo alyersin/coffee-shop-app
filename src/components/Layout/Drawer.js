@@ -15,21 +15,8 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
-// Mock data for coffee brands
-const cafeaBoabeBrands = [
-  { name: "Brand 1", link: "/cafea/brand1" },
-  { name: "Brand 2", link: "/cafea/brand2" },
-  { name: "Brand 3", link: "/cafea/brand3" },
-  { name: "Brand 4", link: "/cafea/brand4" },
-];
-
-const cafeaCapsuleBrands = [
-  { name: "Capsule Brand 1", link: "/capsule/brand1" },
-  { name: "Capsule Brand 2", link: "/capsule/brand2" },
-  { name: "Capsule Brand 3", link: "/capsule/brand3" },
-  { name: "Capsule Brand 4", link: "/capsule/brand4" },
-];
+import coffeeData from "../../app/data/coffeeTypes.json";
+import teaData from "../../app/data/teaTypes.json";
 
 export default function MobilePopover() {
   return (
@@ -53,94 +40,51 @@ export default function MobilePopover() {
               </AccordionButton>
               <AccordionPanel pb={4}>
                 <Accordion allowMultiple>
-                  {/* Cafea Boabe */}
+                  {/* CAFEA BOABE */}
                   <AccordionItem>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Cafea Boabe
-                      </Box>
-                      <AccordionIcon />
+                    <AccordionButton
+                      as={Link}
+                      href="/cafea/boabe"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Cafea Boabe
                     </AccordionButton>
-                    <AccordionPanel pb={4}>
-                      {cafeaBoabeBrands.map((brand) => (
-                        <Link
-                          key={brand.name}
-                          display="block"
-                          href={brand.link}
-                        >
-                          {brand.name}
-                        </Link>
-                      ))}
-                    </AccordionPanel>
                   </AccordionItem>
-                  {/* Cafea Capsule */}
+                  {/* CAFEA CAPSULE */}
                   <AccordionItem>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Cafea Capsule
-                      </Box>
-                      <AccordionIcon />
+                    <AccordionButton
+                      as={Link}
+                      href="/cafea/capsule"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Cafea Capsule
                     </AccordionButton>
-                    <AccordionPanel pb={4}>
-                      {cafeaCapsuleBrands.map((brand) => (
-                        <Link
-                          key={brand.name}
-                          display="block"
-                          href={brand.link}
-                        >
-                          {brand.name}
-                        </Link>
-                      ))}
-                    </AccordionPanel>
                   </AccordionItem>
-                  {/* Cafea Macinata */}
+                  {/* CAFEA MACINATA */}
                   <AccordionItem>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Cafea Macinata
-                      </Box>
-                      <AccordionIcon />
+                    <AccordionButton
+                      as={Link}
+                      href="/cafea/macinata"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Cafea Macinata
                     </AccordionButton>
-                    <AccordionPanel pb={4}>
-                      {cafeaCapsuleBrands.map((brand) => (
-                        <Link
-                          key={brand.name}
-                          display="block"
-                          href={brand.link}
-                        >
-                          {brand.name}
-                        </Link>
-                      ))}
-                    </AccordionPanel>
                   </AccordionItem>
-
-                  {/* Cafea Decofeinizata */}
-                  <AccordionItem>
-                    <AccordionButton>
-                      <Box flex="1" textAlign="left">
-                        Cafea Decofeinizata
-                      </Box>
-                      <AccordionIcon />
+                  {/* CAFEA DECOFEINIZATA */}
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/cafea/decofeinizata"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Cafea Decofeinizata
                     </AccordionButton>
-                    <AccordionPanel pb={4}>
-                      {cafeaCapsuleBrands.map((brand) => (
-                        <Link
-                          key={brand.name}
-                          display="block"
-                          href={brand.link}
-                        >
-                          {brand.name}
-                        </Link>
-                      ))}
-                    </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-
-                {/* Cafea instanta */}
-
-                <Link display="block" href="/cafea/decofeinizata">
-                  Cafea Decofeinizata
-                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -153,20 +97,49 @@ export default function MobilePopover() {
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                <Link display="block" href="/ceai/verde">
-                  Ceai Verde
-                </Link>
-                <Link display="block" href="/ceai/negru">
-                  Ceai Negru
-                </Link>
+                <Accordion allowMultiple>
+                  {/* CEAI CAPSULE */}
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/ceai/capsule"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Ceai Capsule
+                    </AccordionButton>
+                  </AccordionItem>
+                  {/* CEAI INFUZABIL */}
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/ceai/infuzabil"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Ceai Infuzabil
+                    </AccordionButton>
+                  </AccordionItem>
+                  {/* CEAI INSTANT */}
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/ceai/instant"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Ceai Instant
+                    </AccordionButton>
+                  </AccordionItem>
+                </Accordion>
               </AccordionPanel>
             </AccordionItem>
 
-            {/* SERVICES */}
+            {/* ACCESORII */}
             <AccordionItem>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  Services
+                  ACCESORII
                 </Box>
                 <AccordionIcon />
               </AccordionButton>

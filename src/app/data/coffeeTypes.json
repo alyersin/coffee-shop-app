@@ -1,0 +1,27 @@
+{
+  "cafeaBoabe": [
+    { "name": "Brand 1", "link": "/cafea/brand1" },
+    { "name": "Brand 2", "link": "/cafea/brand2" },
+    { "name": "Brand 3", "link": "/cafea/brand3" },
+    { "name": "Brand 4", "link": "/cafea/brand4" }
+  ],
+
+  "cafeaCapsule": [
+    { "name": "Capsule Brand 1", "link": "/capsule/brand1" },
+    { "name": "Capsule Brand 2", "link": "/capsule/brand2" },
+    { "name": "Capsule Brand 3", "link": "/capsule/brand3" },
+    { "name": "Capsule Brand 4", "link": "/capsule/brand4" }
+  ],
+
+  "cafeaMacinata": [
+    { "name": "Macinata Brand 1", "link": "/macinata/brand1" },
+    { "name": "Macinata Brand 2", "link": "/macianta/brand2" },
+    { "name": "Macinata Brand 3", "link": "/macianta/brand3" }
+  ],
+
+  "cafeaDecofeinizata": [
+    { "name": "Decofeinizata Brand 1", "link": "/decofeinizata/brand1" },
+    { "name": "Decofeinizata Brand 2", "link": "/decofeinizata/brand2" },
+    { "name": "Decofeinizata Brand 3", "link": "/decofeinizata/brand3" }
+  ]
+}
