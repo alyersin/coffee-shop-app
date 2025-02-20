@@ -15,15 +15,13 @@ import {
   AccordionIcon,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import coffeeData from "../../app/data/coffeeTypes.json";
-import teaData from "../../app/data/teaTypes.json";
 
 export default function MobilePopover() {
   return (
-    <Popover placement="bottom-start">
+    <Popover placement="bottom-start" offset={[0, 10]}>
       <PopoverTrigger>
-        <Button variant="ghost">
-          <HamburgerIcon />
+        <Button variant="ghost" bg="transparent" _hover={{ bg: "transparent" }}>
+          <HamburgerIcon boxSize={8} />
         </Button>
       </PopoverTrigger>
       <PopoverContent w="100vw" maxW="100vw" left="0" borderRadius="0" p={4}>
@@ -144,28 +142,117 @@ export default function MobilePopover() {
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                <Link display="block" href="/services/service1">
-                  Service 1
-                </Link>
-                <Link display="block" href="/services/service2">
-                  Service 2
-                </Link>
+                <Accordion allowMultiple>
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/accesorii"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Lapte
+                    </AccordionButton>
+                  </AccordionItem>
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/accesorii"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Zahar, indulcitori
+                    </AccordionButton>
+                  </AccordionItem>
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/accesorii"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Pahare, Capace, Palete
+                    </AccordionButton>
+                  </AccordionItem>{" "}
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/accesorii"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Cesti, Farfurii, Altele
+                    </AccordionButton>
+                  </AccordionItem>
+                </Accordion>
               </AccordionPanel>
             </AccordionItem>
 
-            {/* CONTACT */}
+            {/* ESPRESSOARE SI CAFETIERE */}
             <AccordionItem>
               <AccordionButton>
                 <Box flex="1" textAlign="left">
-                  Contact
+                  ESPRESSOARE SI CAFETIERE
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
+
               <AccordionPanel pb={4}>
-                <Link display="block" href="/contact">
-                  Contact Us
-                </Link>
+                <Accordion allowMultiple>
+                  {/* ESPRESSOARE */}
+                  <AccordionItem>
+                    <AccordionButton
+                      as={Link}
+                      href="/espressoare"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Aparate cafea boabe
+                    </AccordionButton>
+                  </AccordionItem>
+                  <AccordionItem>
+                    <AccordionButton
+                      as={Link}
+                      href="/cafetiere"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Aparate cafea capsule
+                    </AccordionButton>
+                  </AccordionItem>
+                  <AccordionItem>
+                    <AccordionButton
+                      as={Link}
+                      href="/cafetiere"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Aparate cafea macinata
+                    </AccordionButton>
+                  </AccordionItem>
+                  <AccordionItem borderBottom="none">
+                    <AccordionButton
+                      as={Link}
+                      href="/cafetiere"
+                      display="block"
+                      textAlign="left"
+                    >
+                      Aparate cafea macinata
+                    </AccordionButton>
+                  </AccordionItem>
+                </Accordion>
               </AccordionPanel>
+            </AccordionItem>
+
+            {/* PROMOTII */}
+            <AccordionItem>
+              <AccordionButton
+                as={Link}
+                href="/promotii"
+                display="block"
+                textAlign="left"
+              >
+                PROMOTII
+              </AccordionButton>
             </AccordionItem>
           </Accordion>
         </PopoverBody>
