@@ -3,8 +3,8 @@ import { Box, HStack, Icon, Image, Link, Text, Button } from "@chakra-ui/react";
 import React, { useState, useContext } from "react";
 import Drawer from "./Drawer";
 import { FaUser, FaShoppingCart, FaPhoneAlt, FaHeart } from "react-icons/fa";
-import Search from "./Search";
-import Banner from "./Banner";
+import Search from "./Search.jsx";
+import Banner from "./Banner.jsx";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "@/context/AuthContext";
 

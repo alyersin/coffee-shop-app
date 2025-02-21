@@ -1,12 +1,12 @@
 "use client";
 
 import "./globals.css";
-import Header from "@/components/Layout/Header";
 import { ChakraProvider } from "@chakra-ui/react";
 import { CartProvider } from "@/context/CartContext";
 import { AuthProvider } from "@/context/AuthContext";
 import theme from "../theme";
-import Footer from "@/components/Layout/Footer";
+import Header from "@/components/Layout/Header.jsx";
+import Footer from "@/components/Layout/Footer.jsx";
 
 export default function RootLayout({ children }) {
   return (
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh", // Ensure full viewport height
+          minHeight: "100vh",
           margin: 0,
         }}
       >
@@ -24,9 +24,7 @@ export default function RootLayout({ children }) {
           <CartProvider>
             <ChakraProvider theme={theme}>
               <Header />
-              <main style={{ flex: 1 }}>{children}</main>{" "}
-              {/* Makes content fill space */}
-              <Footer />
+              <main style={{ flex: 1 }}>{children}</main> <Footer />
             </ChakraProvider>
           </CartProvider>
         </AuthProvider>

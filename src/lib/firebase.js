@@ -24,7 +24,6 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
 
-// Ensure "email" scope is included for Facebook login
 facebookProvider.addScope("email");
 
 export { auth, googleProvider, facebookProvider };
