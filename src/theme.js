@@ -15,7 +15,6 @@ const theme = extendTheme({
   styles: {
     global: {
       "html, body": {
-        // backgroundImage: "url('/assets/body-bg.jpg')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -37,28 +36,38 @@ const theme = extendTheme({
     },
     Input: {
       baseStyle: {
-        border: "none",
+        border: "1px solid", // ✅ Ensure border is always visible
+        borderColor: "gray.300", // ✅ Light gray border
         _focus: {
-          boxShadow: "none",
+          borderColor: "blue.500", // ✅ Blue border on focus
+          boxShadow: "0 0 0 2px blue.200", // ✅ Subtle focus ring
         },
       },
       variants: {
         outline: {
           field: {
-            border: "none",
+            border: "1px solid",
+            borderColor: "gray.400",
             _focus: {
-              boxShadow: "none",
+              borderColor: "blue.500",
+              boxShadow: "0 0 0 2px blue.300",
             },
           },
         },
         filled: {
           field: {
-            border: "none",
+            border: "1px solid",
+            borderColor: "gray.400",
+            backgroundColor: "gray.100",
             _focus: {
-              boxShadow: "none",
+              borderColor: "blue.500",
+              boxShadow: "0 0 0 2px blue.300",
             },
           },
         },
+      },
+      defaultProps: {
+        variant: "outline", // ✅ Make "outline" the default variant
       },
     },
   },

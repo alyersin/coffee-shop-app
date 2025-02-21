@@ -4,16 +4,27 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { auth, googleProvider } from "./firebase";
+import { auth, googleProvider, facebookProvider } from "./firebase";
 
 // GOOGLE SIGN-IN
 export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
-    console.log("User signed in:", result.user);
+    console.log("User signed in with Google:", result.user);
     return result.user;
   } catch (error) {
-    console.error("Error signing in:", error.message);
+    console.error("Error signing in with Google:", error.message);
+  }
+};
+
+// FACEBOOK SIGN-IN
+export const signInWithFacebook = async () => {
+  try {
+    const result = await signInWithPopup(auth, facebookProvider);
+    console.log("User signed in with Facebook:", result.user);
+    return result.user;
+  } catch (error) {
+    console.error("Error signing in with Facebook:", error.message);
   }
 };
 
@@ -32,7 +43,7 @@ export const signInWithEmail = async (email, password) => {
   }
 };
 
-//REGISTER EMAIL AND PASSWORD
+// REGISTER EMAIL AND PASSWORD
 export const registerWithEmail = async (email, password) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(

@@ -19,7 +19,7 @@ export default function Search() {
     <Box px={4} width="100%">
       <InputGroup width="100%">
         <Input
-          placeholder="Search"
+          placeholder="Cauta un produs"
           flex="1"
           pr="3rem"
           borderRadius="18px"
@@ -37,7 +37,7 @@ export default function Search() {
           <IconButton
             icon={<FaSearch />}
             variant="ghost"
-            aria-label="Search"
+            aria-label="Cautare"
             bg="transparent"
             borderRadius="50%"
             _hover={{ bg: "transparent" }}
